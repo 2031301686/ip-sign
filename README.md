@@ -4,9 +4,16 @@
 
 修改自：[https://github.com/xhboke/IP](https://github.com/xhboke/IP)
 
-## 介绍
+## 修改说明
 
-<br/>
+1.删除原有失效API
+2.新增三种API(高德，腾讯，太平洋)
+3.判断请求头中IP，如套了CDN也能获取用户IP
+4.删除多余无效功能
+5.适配更高PHP版本
+6.增加轮番查询，直至查询到定位归属地
+
+## 介绍
 
 IP签名档显示归属地、日期、操作系统、IP地址。用于放在网站某个地方的欢迎标签，基于开源程序：[IP签名档](https://github.com/xhboke/IP) 修改
 
@@ -18,10 +25,29 @@ IP签名档显示归属地、日期、操作系统、IP地址。用于放在网�
 
 2024年5月21日：新增两种API，变为三种API轮询，直至查询到归属地，太平洋API无需配置KEY，直接部署也可用
 
-## 安装
+## 环境要求
 
-使用php环境，再将所有文件下载放入网站指定目录即可。
+|需求|支持范围|推荐|
+|:--:|:--:|:--:|
+|web服务|全部|nginx1.20|
+|PHP|全部|php7.2|
+
+## 使用教程
+
+部署到php网站的二级目录或者新建一个支持php的网站
+源码解压
 
 ## 配置项目
 
-编辑index.php文件，43行，可填写高德key，腾讯key
+修改index.php的内容
+
+47行和48填入高德申请的key
+50和51行填入腾讯申请的key
+
+需使用自己的key，或删除其中内容
+
+高德apikey获取教程：[https://wxsnote.cn/2770.html](https://wxsnote.cn/2770.html)
+
+腾讯apikey获取教程：[https://wxsnote.cn/4819.html](https://wxsnote.cn/4819.html)
+
+200行后自定义内容
