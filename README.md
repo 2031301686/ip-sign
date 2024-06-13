@@ -1,23 +1,27 @@
-# IP签名档源码
-<h2>说在前面</h2>
-自从论坛IP签名档开放以来，访问量达到1806287，一百八十多万，由于证书过期和懒得维护。今特开源。
-<h2>演示效果</h2>
-<img src="https://i.loli.net/2019/07/16/5d2d5b1a11c8724579.png" alt="" width="550" height="250" class="alignnone size-full wp-image-862" />
-<h2>原帖地址</h2>
-https://www.xhboke.com/858.html
-<h2>修复</h2>
-<h3>2020.04.22<h3>
-<p>时隔两年，新增天气</p>
-<p>修复部分ua无法解析</p>
-<p>效果：https://xhboke.com/news/?s=6L+Z5piv5ryU56S65pWI5p6c77yM6L+Z6YeM5paH5a2X5Y+v5Lul5pS55Y+Y</p>
-<h3>2019.7.16<h3>
-<p>修复并发量限制</p>
-<p>测试CentOS+PHP7.2</p>
-<h3>2018.6.11<h3>
-$url="http://ip.taobao.com/service/getIpInfo.php?ip=".$ip; <br>
-$country = $data['data']['country']; <br>
-$region = $data['data']['region']; <br>
-$city = $data['data']['city'];
-<h3>感谢<h3>
-https://github.com/ua-parser/uap-php
+# IP签名档
 
+项目介绍及使用教程：[https://wxsnote.cn/2762.html](https://wxsnote.cn/2762.html)
+
+修改自：[https://github.com/xhboke/IP](https://github.com/xhboke/IP)
+
+## 介绍
+
+<br/>
+
+IP签名档显示归属地、日期、操作系统、IP地址。用于放在网站某个地方的欢迎标签，基于开源程序：[IP签名档](https://github.com/xhboke/IP) 修改
+
+本站提供的是[王先生笔记]二开后的归属地签名档，因为原程序已经不能正常使用了，所以修改了这个程序。
+
+所有信息可自定义修改：背景图、文字颜色、字体、文字内容等(压缩包内有说明修改哪里)。
+
+2024年6月18日：修改API为高德，删除多余失效功能
+
+2024年5月21日：新增两种API，变为三种API轮询，直至查询到归属地，太平洋API无需配置KEY，直接部署也可用
+
+## 安装
+
+使用php环境，再将所有文件下载放入网站指定目录即可。
+
+## 配置项目
+
+编辑index.php文件，43行，可填写高德key，腾讯key
