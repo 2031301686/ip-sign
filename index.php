@@ -114,6 +114,7 @@ function tx_api($ip, $tx_key, $tx_Secret_key) {
 }
 
 
+//太平洋api
 function tpy_api($ip) {
     
     $tpy_api_url = 'http://whois.pconline.com.cn/ipJson.jsp?json=true&ip=' . $ip;
